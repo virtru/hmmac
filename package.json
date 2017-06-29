@@ -1,7 +1,7 @@
 {
   "name": "hmmac",
   "description": "Easy HMAC connect/express middleware",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/cmawhorter/hmmac",
   "author": {
     "name": "Cory Mawhorter",
@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "aws-sdk": "^2.1.35",
+    "aws-sdk": "^2.79.0",
     "body-parser": "^1.13.1",
     "express": "^4.13.0",
     "grunt": "0.4.x",
