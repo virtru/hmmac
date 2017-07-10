@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [v0.2.3] - 2017-07-10
 ### Added
-- Start of CHANGELOG #1
+- Start of CHANGELOG [#1]
 
 ### Changed
 - `hmmac._hash` & `hmmac._hmac` default to utf8 to mimic node v6+ behaviour [#1]
