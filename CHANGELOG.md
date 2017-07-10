@@ -6,10 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Start of CHANGELOG (#1)
+- Start of CHANGELOG #1
 
 ### Changed
-- `hmmac._hash` & `hmmac._hmac` default to utf8 to mimic node v6+ behaviour (#1)
-- `hmmac._hash` & `hmmac._hmac` accept an `inputEncoding` to override utf8 (#1)
-- scheme plain's `sign` now takes an additional parameter of object with input/output encodings (#1)
-- `hmmac.sign` & `hmmac._sign` take an optional additional parameter of input/output encodings (#1)
+- `hmmac._hash` & `hmmac._hmac` default to utf8 to mimic node v6+ behaviour #1
+- `hmmac._hash` & `hmmac._hmac` accept an `inputEncoding` to override utf8 #1
+- scheme plain's `sign` now takes an additional parameter of object with input/output encodings #1
+- `hmmac.sign` & `hmmac._sign` take an optional additional parameter of input/output encodings #1
