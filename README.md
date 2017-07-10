@@ -1,4 +1,4 @@
-# hmmac (pronounced hammock) [![Build Status](https://secure.travis-ci.org/cmawhorter/hmmac.png)](http://travis-ci.org/cmawhorter/hmmac)
+# hmmac (pronounced hammock) [![Build Status](https://travis-ci.org/cmawhorter/hmmac.svg?branch=master)](http://travis-ci.org/cmawhorter/hmmac)
 
 Flexible HMAC authentication module for express/connect and beyond -- with no external (to nodejs) dependencies.
 
@@ -7,12 +7,6 @@ It is modeled on AWS request signing and has all the pros/cons of their method.
   * Con: [Subject to replay attacks](http://stackoverflow.com/a/12267408)  (See note at bottom)
 
 What is this useful for? Building arbitrary stateless authentication schemes and authorizing against them (usually for use with an API).  i.e. not OAuth or anything else that requires session state.
-
-## About
-
-Version 0.2.0 is 100% new, and no code from v0.1.0 remains.  Despite the 0.2.0 version, this should be considered 0.1.0 in terms of stability.
-
-As of right now, the API should be considered experimental.  I'm hoping to have it stable by 0.2.1.
 
 ## Getting Started
 
@@ -186,6 +180,10 @@ Example:  `HMAC 7c132f4:7640579425817317c132f4a2feb54`
   - `signature` = `'7640579425817317c132f4a2feb54'`
 
 You can extend the object with any additional properties to make your scheme work.  e.g. the aws4 scheme includes an additional `schemeConfig` property which parses all that `Credential=..., SignedHeaders=..., Signature=...` stuff.
+
+## Express 4.x
+
+As of Express 4.0 (and maybe earlier) [req.body will be undefined by default](http://expressjs.com/api.html#req.body) and you must include body-parser to have req.body be populated.  req.body is required for hmmac to work so be sure to include the body-parser middleware *prior* to hmmac's middleware otherwise validation will fail.
 
 ## Replay Attacks
 

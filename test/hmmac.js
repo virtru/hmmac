@@ -45,6 +45,31 @@ describe('Hmmac', function() {
         , hash = hmmac._hash('abcd1234', 'hex');
       assert.equal(hash, '7ce0359f12857f2a90c7de465f40a95f01cb5da9');
     });
+
+    it('should handle non-ascii correctly', function() {
+      var correctHash = 'f78d49e1bd0c203d0c83da9fe02c82594bfddc4f071e013af52beef5b226c8a5';
+      var incorrectHash = 'd6d6713e04088e858a80399f764d1275b35668c2797150be128d4c2383c570a5';
+      var hmmac = new Hmmac();
+      var hash = hmmac._hash('{"description":"Les numéros IBAN doivent chiffrer"}', 'hex');
+      assert.equal(hash, correctHash);
+
+      hash = hmmac._hash(Buffer.from('{"description":"Les numéros IBAN doivent chiffrer"}', 'utf8'), 'hex');
+      assert.equal(hash, correctHash);
+
+      var wrongHash = hmmac._hash(Buffer.from('{"description":"Les numéros IBAN doivent chiffrer"}', 'ascii'), 'hex');
+      assert.equal(wrongHash, incorrectHash);
+      assert.notEqual(hash, wrongHash);
+
+      wrongHash = hmmac._hash(Buffer.from('{"description":"Les numéros IBAN doivent chiffrer"}', 'binary'), 'hex');
+      assert.equal(wrongHash, incorrectHash);
+      assert.notEqual(hash, wrongHash);
+
+      wrongHash = hmmac._hash(Buffer.from('{"description":"Les numéros IBAN doivent chiffrer"}', 'latin1'), 'hex');
+      assert.equal(wrongHash, incorrectHash);
+      assert.notEqual(hash, wrongHash);
+    });
+
+    it('should always default')
   });
 
 
