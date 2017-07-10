@@ -13,5 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `hmmac._hash` & `hmmac._hmac` accept an `inputEncoding` to override utf8 [#1]
 - scheme plain's `sign` now takes an additional parameter of object with input/output encodings [#1]
 - `hmmac.sign` & `hmmac._sign` take an optional additional parameter of input/output encodings [#1]
+- Tagged to match version and not be independent
 
 [#1]: https://github.com/virtru/hmmac/pull/1
+
+[v0.2.3]: https://github.com/virtru/hmmac/compare/v1.0.0...virtru:v0.2.3
