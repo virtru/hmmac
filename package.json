@@ -1,7 +1,7 @@
 {
   "name": "hmmac",
   "description": "Easy HMAC connect/express middleware",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://github.com/cmawhorter/hmmac",
   "author": {
     "name": "Cory Mawhorter",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "main": "lib/hmmac",
   "engines": {
-    "node": ">=0.10.0 <9.0.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "grunt test"
