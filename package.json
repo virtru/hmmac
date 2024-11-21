@@ -33,7 +33,7 @@
     "grunt-mocha-test": "0.10.x",
     "grunt-simple-mocha": "0.4.x",
     "mocha": "^1.17.1",
-    "restify": "2.x",
+    "restify": "4.x",
     "superagent": "0.12.x"
   },
   "keywords": [
