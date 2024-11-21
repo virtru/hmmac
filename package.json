@@ -34,7 +34,7 @@
     "grunt-simple-mocha": "0.4.x",
     "mocha": "^1.17.1",
     "restify": "2.x",
-    "superagent": "0.12.x"
+    "superagent": "9.0.x"
   },
   "keywords": [
     "hmac",
