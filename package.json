@@ -27,7 +27,7 @@
     "aws-sdk": "^2.79.0",
     "body-parser": "^1.13.1",
     "express": "^4.13.0",
-    "grunt": "0.4.x",
+    "grunt": "1.5.x",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "~0.6.3",
     "grunt-mocha-test": "0.10.x",
